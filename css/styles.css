@@ -1,0 +1,308 @@
+/* Root CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #eeedeb;
+  --secondary-color: #e0ccbe;
+  --button-color: #3c3633;
+  --text-color: #fbf9f1;
+  --light-color: #ffbb99;
+  --logo-purple: #502c3d;
+  --logo-grey: #9c5e4d;
+  --shade-color: #747264;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Sixtyfour;
+  src: url(../fonts/Sixtyfour-Regular.ttf);
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Nav */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--shade-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo .logo-name {
+  font-weight: bold;
+  color: var(--light-color);
+  font-family: Sixtyfour;
+}
+
+.login-container button {
+  padding: 10px 15px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+nav .links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  background-color: var(--secondary-color);
+}
+
+nav .links li a {
+  color: var(--logo-grey);
+  padding: 7.5px 5px;
+  font-weight: bold;
+}
+
+nav .links li .active {
+  color: brown;
+  border-bottom: 2px solid brown;
+}
+
+nav .links li a:hover {
+  color: brown;
+  border-bottom: 2px solid brown;
+}
+
+/* Header */
+header {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  height: 80vh;
+}
+
+.slider img {
+  transition: 1s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 1 0 100%;
+}
+
+.slider-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.slider-content .slogan {
+  font-weight: bold;
+  font-family: fantasy;
+  font-size: 50px;
+  color: var(--logo-purple);
+}
+
+.select-care a button {
+  padding: 10px 20px;
+  border: none;
+  border: 2px solid var(--logo-purple);
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: transparent;
+  color: var(--logo-purple);
+  cursor: pointer;
+}
+
+.select-care a:first-child {
+  margin-right: 40px;
+}
+
+.select-care a:first-child button {
+  background-color: var(--logo-purple);
+  color: var(--text-color);
+}
+
+.select-care a:first-child button:hover {
+  background-color: transparent;
+  color: var(--logo-purple);
+}
+
+.select-care a:last-child button:hover {
+  background-color: var(--logo-purple);
+  color: var(--text-color);
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Home Care Services */
+.home-care {
+  background-color: var(--secondary-color);
+  padding: 30px 0;
+}
+
+.personal-care {
+  background-color: white;
+  padding: 30px 0;
+}
+
+.home-care-service-title,
+.personal-care-service-title {
+  font-family: Roboto-Bold;
+  font-size: 40px;
+  color: var(--logo-grey);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home-care-service-container,
+.personal-care-service-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-care-service-card {
+  background-color: var(--primary-color);
+  box-shadow: 5px 5px 5px 5px var(--shade-color);
+}
+
+.home-care-service-card,
+.personal-care-service-card {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  transition: 0.5s;
+}
+
+.personal-care-service-card {
+  background-color: var(--shade-color);
+  color: var(--text-color);
+  box-shadow: 5px 5px 5px 5px var(--button-color);
+}
+
+.home-care-service-card:hover,
+.personal-care-service-card:hover {
+  box-shadow: none;
+}
+
+.home-care-service-card img,
+.personal-care-service-card img {
+  width: 300px;
+  height: 150px;
+}
+
+.home-care-service-card .care-service-content,
+.personal-care-service-card .care-service-content {
+  padding: 10px;
+}
+
+.home-care-service-card .care-service-title {
+  color: var(--logo-grey);
+}
+
+.home-care-service-card .care-service-title,
+.personal-care-service-card .care-service-title {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.personal-care-service-card .care-service-title {
+  color: var(--light-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--logo-purple);
+  color: var(--text-color);
+  padding: 30px 10px;
+}
+
+.company-contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.company-contacts .company-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.company-contacts .company-social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+.care-givers-register button {
+  padding: 10px 20px;
+  border: 2px solid var(--logo-grey);
+  color: var(--logo-grey);
+  background-color: transparent;
+}
+
+.care-givers-register a:first-child button {
+  background-color: var(--logo-grey);
+  color: var(--text-color);
+}
+
+.care-givers-register a:first-child button:hover {
+  background-color: transparent;
+  color: var(--logo-grey);
+  cursor: pointer;
+}
+
+.care-givers-register a:last-child button:hover {
+  background-color: var(--logo-grey);
+  color: var(--text-color);
+  cursor: pointer;
+}
